@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Guessing Game</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700:&effect=fire-animation|fire|ice" rel="stylesheet"> -->
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <img class="cold-back" id="firstFrost" src="src/firstFrost.png">
+    <img class="cold-back" id="secondFrost" src="src/secondFrost.png">
+    <img class="cold-back" id="thirdFrost" src="src/thirdFrost.png">
+    <div id="cold-back"></div>
+    <div id="hot-back"></div>
+    <div id="transparent-back"></div>
+    <div id="hint">
+        <button id="x-button">x</button>
+        <p>The hint goes here</p>
+    </div>
+
+    <div id="game-holder">
+        <h1>Play the Guessing Game!</h1>
+        <h2>Guess a number between 1-100</h2>
+        <input type="text" id="input" placeholder="#" maxlength="3" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+
+        <div id="go-button-container">
+            <button id="go-button">Go!</button>
+        </div>
+        <div id="guesses-container">
+            <p>
+                <span class="guesses" id="guess1">-</span><span class="guesses" id="guess2">-</span><span class="guesses"
+                    id="guess3">-</span><span class="guesses" id="guess4">-</span><span class="guesses" id="guess5">-</span>
+            </p>
+        </div>
+
+        <div id="buttons-container">
+            <button id="rest-button">reset</button>
+            <button id="hint-button">hint</button>
+        </div>
+
+    </div>
+    <h1 class="font-effect-fire-animation" id="flames-large">______</h1>
+    <footer>
+        <img id="fullstack-logo" src="fullstack_logo.png" alt="Fullstack logo">
+        <p id="project-by">project by Sophie Creutz</p>
+        <img id="grace-hopper-logo" src="grace_hopper_logo.png" alt="Grace Hopper logo">
+    </footer>
+    <script src='guessing-game.js'></script>
+</body>
+
+</html>

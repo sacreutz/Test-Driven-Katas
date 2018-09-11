@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!-- Info.plist for Transcribe! ... try "lsregister -dump" for a good laugh about all this -->
+<dict>
+	<key>CFBundleDevelopmentRegion</key> <string>English</string>
+	<key>CFBundleExecutable</key> <string>Transcribe!</string>
+	<key>CFBundleName</key> <string>Transcribe!</string>
+	<key>CFBundleIconFile</key> <string>XSCAPPICN.icns</string>
+	<key>CFBundleIdentifier</key> <string>com.seventhstring.transcribe</string>
+	<key>CFBundleInfoDictionaryVersion</key> <string>6.0</string>
+	<key>CFBundlePackageType</key> <string>APPL</string>
+	<key>CFBundleSignature</key> <string>7SSt</string>
+	<key>CFBundleVersion</key> <string>8.71</string>
+	<key>NSPrincipalClass</key> <string>wxNSApplication</string>
+	<key>NSAppleScriptEnabled</key> <string>YES</string>
+	<key>LSApplicationCategoryType</key> <string>public.app-category.music</string>
+	<key>LSMinimumSystemVersion</key> <string>10.10</string>
+	<key>LSArchitecturePriority</key> <array> <string>i386</string> </array>
+	<key>CFBundleShortVersionString</key> <string>8.71</string>
+	<key>NSHumanReadableCopyright</key> <string>Copyright © 1998-2018 Seventh String Software, All Rights Reserved.</string>
+	<key>CFBundleGetInfoString</key> <string>Transcribe! 8.71, Copyright 1998-2018 Seventh String Software</string>
+	<key>CSResourcesFileMapped</key> <true/>
+
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeIconFile</key> <string>XSCDOCICN.icns</string>
+			<key>CFBundleTypeName</key> <string>Transcribe! transcription document</string>
+			<key>CFBundleTypeRole</key> <string>Editor</string>
+			<key>LSHandlerRank</key> <string>Owner</string>
+
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.seventhstring.xsc</string>
+			</array>
+		</dict>
+
+		<dict>
+			<key>CFBundleTypeIconFile</key> <string>XSCDOCICN.icns</string>
+			<key>CFBundleTypeName</key> <string>Transcribe! script file</string>
+			<key>CFBundleTypeRole</key> <string>Viewer</string>
+			<key>LSHandlerRank</key> <string>Owner</string>
+
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.seventhstring.xscscpt</string>
+			</array>
+		</dict>
+
+		<dict>
+			<key>CFBundleTypeName</key> <string>Sound file</string>
+			<key>CFBundleTypeRole</key> <string>Viewer</string>
+
+			<key>LSItemContentTypes</key>
+			<array>
+				<!-- it would have been nice if we could specify this alone... -->
+				<string>public.audiovisual-​content</string>
+				<!-- but we need specific types listed or can't drag-n-drop onto dock app icon.
+				it's worth including loads, as GStreamer might be able to read them -->
+				<string>public.aiff-audio</string>
+				<string>public.aifc-audio</string>
+				<string>public.movie</string>
+				<string>public.video</string>
+				<string>com.apple.quicktime-movie</string>
+				<string>public.avi</string>
+				<string>public.mp3</string>
+				<string>public.mpeg</string>
+				<string>public.mpeg4</string>
+				<string>public.mpeg-4-audio</string>
+				<string>public.mpeg-4</string>
+				<string>public.3gpp</string>
+				<string>public.3gpp2</string>
+				<string>public.audio</string>
+				<string>public.ulaw-audio</string>
+				<string>com.microsoft.waveform-audio</string>
+				<string>com.microsoft.windows-​media-wm</string>
+				<string>com.microsoft.windows-​media-wmv</string>
+				<string>com.microsoft.windows-​media-wmp</string>
+				<string>com.microsoft.windows-​media-wma</string>
+				<string>com.digidesign.sd2-audio</string>
+				<string>com.real.realmedia</string>
+				<string>com.real.realaudio</string>
+				<string>com.macromedia.flash.flv</string>
+				<string>public.dv</string>
+				<string>org.xiph.ogg</string>
+				<string>org.xiph.flac</string>
+			</array>
+		</dict>
+
+	</array>
+
+	<!-- types created/defined by us	 -->
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+
+		<dict>
+			<key>UTTypeDescription</key> <string>Transcribe! transcription document</string>
+			<key>UTTypeConformsTo</key> <array> <string>public.data</string> </array>
+			<key>UTTypeIconFile</key> <string>XSCDOCICN.icns</string>
+			<key>UTTypeIdentifier</key> <string>com.seventhstring.xsc</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key> <array> <string>xsc</string> </array>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>UTTypeDescription</key> <string>Transcribe! script file</string>
+			<key>UTTypeConformsTo</key> <array> <string>public.script</string> </array>
+			<key>UTTypeIconFile</key> <string>XSCDOCICN.icns</string>
+			<key>UTTypeIdentifier</key> <string>com.seventhstring.xscscpt</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key> <array> <string>xscscpt</string> </array>
+			</dict>
+		</dict>
+
+	</array>
+
+	<!-- these are needed for recognition of these types by their extensions where
+	the app that created them may not be present, so the OS doesn't know what they are.
+	Other well-known ones will be known already.
+	It's important to use the correct UTTypeIdentifier as defined by the owner of the format	-->
+	<key>UTImportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeDescription</key> <string>Flash video</string>
+			<key>UTTypeConformsTo</key> <array> <string>public.data</string> </array>
+			<key>UTTypeIdentifier</key> <string>com.macromedia.flash.flv</string>
+			<key>UTTypeTagSpecification</key> <dict> <key>public.filename-extension</key> <array> <string>flv</string> </array> </dict>
+		</dict>
+		<dict>
+			<key>UTTypeDescription</key> <string>Ogg Vorbis sound file</string>
+			<key>UTTypeConformsTo</key> <array> <string>public.data</string> </array>
+			<key>UTTypeIdentifier</key> <string>org.xiph.ogg</string>
+			<key>UTTypeTagSpecification</key> <dict> <key>public.filename-extension</key> <array> <string>ogg</string> </array> </dict>
+		</dict>
+		<dict>
+			<key>UTTypeDescription</key> <string>Flac sound file</string>
+			<key>UTTypeConformsTo</key> <array> <string>public.data</string> </array>
+			<key>UTTypeIdentifier</key> <string>org.xiph.flac</string>
+			<key>UTTypeTagSpecification</key> <dict> <key>public.filename-extension</key> <array> <string>flac</string> </array> </dict>
+		</dict>
+	</array>
+</dict>
+</plist>
